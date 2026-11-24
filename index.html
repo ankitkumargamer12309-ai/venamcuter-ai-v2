@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VENAMCUTER AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:white;font-family:Arial,sans-serif}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292929}
+.logo{font-size:25px;font-weight:900;color:#ff3030}
+nav a{color:#bbb;text-decoration:none;margin-left:20px}
+.hero{text-align:center;padding:90px 20px 65px}
+.tag{color:#ff3838;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(38px,7vw,75px);margin:20px 0}
+h1 span{color:#ff3030}
+.hero p{color:#aaa;font-size:17px}
+.btn{background:#e51f2a;color:white;border:0;padding:15px 28px;border-radius:5px;font-weight:bold;cursor:pointer;margin-top:20px}
+.panel{max-width:850px;margin:25px auto;padding:30px;background:#151515;border:1px solid #333;border-radius:12px}
+.panel h2{margin-top:0}
+.upload{border:2px dashed #555;padding:45px 15px;text-align:center;border-radius:9px;color:#aaa}
+input{max-width:100%;margin-top:20px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;max-width:1000px;margin:50px auto;padding:0 20px}
+.feature{background:#151515;padding:25px;border:1px solid #292929;border-radius:9px}
+.feature h3{color:#ff3939}
+footer{text-align:center;padding:35px;color:#777;border-top:1px solid #292929;margin-top:60px}
+@media(max-width:600px){header{padding:18px 5%}nav a{margin-left:8px;font-size:12px}.hero{padding-top:65px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">VENAMCUTER AI</div>
+<nav><a href="#home">Home</a><a href="#tools">AI Tools</a></nav>
+</header>
+
+<section class="hero" id="home">
+<div class="tag">NEXT GENERATION AI CLIPPING</div>
+<h1>LONG VIDEOS.<br><span>DEADLY MOMENTS.</span></h1>
+<p>Long Videos. Deadly Moments. Perfect Clips.</p>
+<a href="#tools"><button class="btn">START CLIPPING →</button></a>
+</section>
+
+<section class="panel" id="tools">
+<h2>AI VIDEO CLIPPER</h2>
+<p style="color:#aaa">Upload your gameplay video to get started.</p>
+<div class="upload">
+<p>DROP YOUR VIDEO HERE</p>
+<input type="file" id="video" accept="video/*">
+<p>MP4 • MOV • VIDEO FILES</p>
+</div>
+<button class="btn" onclick="startClip()">ANALYZE VIDEO</button>
+<p id="status" style="color:#ff5555"></p>
+</section>
+
+<section class="features">
+<div class="feature"><h3>AI MOMENT DETECTION</h3><p>Find exciting gameplay moments.</p></div>
+<div class="feature"><h3>AUTO SUBTITLES</h3><p>Make clips easier to follow.</p></div>
+<div class="feature"><h3>9:16 EXPORT</h3><p>Designed for Reels and Shorts.</p></div>
+</section>
+
+<footer>VENAMCUTER AI © 2026<br>Instagram: @halcyon_011</footer>
+
+<script>
+function startClip(){
+const file=document.getElementById('video').files[0];
+document.getElementById('status').textContent=file?
+"Video selected! AI processing will be connected in the next stage.":
+"Please select a video first.";
+}
+</script>
+</body>
+</html>
